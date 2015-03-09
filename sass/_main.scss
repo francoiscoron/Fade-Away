@@ -1,0 +1,253 @@
+@media screen and (max-width: 700px) {
+    .hide-for-small {
+        display: none !important;
+    }
+}
+
+// NAV
+.header {
+    max-height: 90px;
+    min-height: 90px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    z-index: 200;
+    width: 100%;
+    text-align: center;
+    transition: all .5s ease;
+    transition: $duration;
+
+    @media screen and (max-width: 700px) {
+        top: 30px;
+        .scrolled & {
+            top: 0;
+        }
+    }
+
+    .scrolled & {
+        position: fixed;
+        background: #FFF;
+        a {
+            color: #333;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+
+    ul {
+          overflow: hidden;
+          list-style: none;
+          padding-top: 31px;
+          display: inline-block;
+          margin-bottom: 0px;
+        li {
+            float: left;
+            margin-right: 2rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+
+            &:nth-child(2) {
+                margin-right: 0;
+            }
+
+            a {
+                color: #FFF;
+                display: block;
+
+            }
+        }
+     }
+}
+
+.logo {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    color: #FFF;
+    padding-top: .5rem;
+    display: block;
+    .scrolled & {
+        color: #333;
+      }
+}
+
+// HOME
+.home__bg {
+    background: transparent url('images/bg-fade-away.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 270px 0;
+    @media screen and (max-width: 700px) {
+        padding: 150px 0 160px;
+        background-position: center center;
+    }
+}
+
+.home__title {
+    color: #FFF;
+    font-size: 2rem;
+    font-family: $primary-font;
+    font-weight: lighter;
+
+    @media screen and (max-width: 700px) {
+        font-size: 1.5rem;
+    }
+}
+
+.launch-video {
+    height: 60px;
+    width: 60px;
+    display: block;
+    position: relative;
+    margin: 4rem auto;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    overflow: hidden;
+    transition: $duration ease-in-out;
+
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        height: 60px; width: 60px;
+        position: absolute;
+        top: 60px;
+        background: rgba(#FFF, .2);
+        transition: $duration ease-in-out;
+    }
+
+    &:before {
+        top: -60px;
+    }
+
+    &:hover {
+        background: rgba(#FFF, .2);
+        &:after { top: 30px; }
+        &:before { top: -30px; }
+    }
+
+    span {
+          border-top: 11px solid transparent;
+          border-bottom: 11px solid transparent;
+          border-left: 18px solid #FFF;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 56%;
+          transform: translate(-50%, -50%);
+    }
+}
+
+.download {
+    padding: 4rem -0px;
+    background: $primary-color;
+}
+
+.about {
+    padding: 4rem 0px;
+}
+
+.about__header {
+    margin-bottom: 2.5rem;
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    .hr {
+        border-bottom: 1px solid $text-color;
+        display: inline-block;
+    }
+}
+
+.showcase {
+    margin-top: 2.5rem;
+}
+
+.image-grid {
+    margin-bottom: 2rem;
+    height: 228px;
+    overflow: hidden;
+    img {
+        min-height: 100%;
+        width: auto;
+    }
+}
+
+.footer {
+    background: transparent url('images/bg-contact.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 250px 0 150px;
+}
+
+.footer__title {
+    color: #FFF;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: $primary-font;
+    font-weight: lighter;
+}
+
+.input__wrapper {
+    float: left;
+    width: 40%;
+    margin-right: 2%;
+
+    & >.input {
+        width: 100%;
+        height: 2.5rem;
+        background: rgba(#000, .3);
+        border: none;
+        padding: 0 1rem;
+
+        font-size: 1rem;
+        font-family: $primary-font;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #FFF;
+    }
+}
+
+.submit__wrapper {
+    float: right;
+    width: 16%;
+
+    & > button {
+        display: block;
+        border: none;
+        height: 2.5rem; width: 100%;
+        background: $primary-color;
+        cursor: pointer;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: 1rem;
+        color: #FFF;
+    }
+}
+.social {
+    padding: 2rem 0px;
+}
+
+.social__link {
+    display: inline-block;
+    width: 3rem;
+    background: #333;
+    line-height: 0;
+    color: #FFF;
+    font-size: 1.2rem;
+    margin: 1rem;
+    height: 3rem;
+    line-height: 3rem;
+    transition: $duration;
+
+    &:hover {
+        background: $primary-color;
+        color: #FFF;
+    }
+}
