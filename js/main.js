@@ -13,7 +13,7 @@
     // scrolling for nav menu
     var sc_state = 0;
     $(window).scroll( function() {
-        var sc_limit = 390;
+        var sc_limit = 190;
         var sc = $(window).scrollTop();
         if(sc >= sc_limit && sc_state == 0) {
             $("body").addClass("scrolled");
@@ -23,4 +23,10 @@
             sc_state = 0;
         }
     });
+
+    // Owl Carousel
+     $("#fa-carousel").owlCarousel({
+        items : 3,
+        autoPlay: 3000
+     });
 })(jQuery);

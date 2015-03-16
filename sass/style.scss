@@ -1,13 +1,51 @@
-// variables
-$primary-font: 'Source Sans Pro', sans-serif;
-$primary-color: #F2A73D;
-$text-color: #333;
-$duration: .4s;
-
-
 // Import
-@import "base";
-@import "foundation";
-@import "main";
+@import "reset";
+@import "partials/var";
+@import "partials/mixins";
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+    background: #fff;
+    color: #222;
+    padding: 0; margin: 0;
+    font-family: $primary-font;
+    line-height: 1.5;
+    position: relative;
+    cursor: auto;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+*:focus {
+    outline: 0;
+}
+
+#fa-carousel .owl-item{
+  padding: 1rem;
+}
+
+@import "partials/foundation";
+@import "partials/layout";
+@import "partials/owl-carousel";
